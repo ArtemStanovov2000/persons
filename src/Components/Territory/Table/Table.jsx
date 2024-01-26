@@ -1,4 +1,4 @@
-import String from "./String"
+import String from "../String/String"
 import { useSelector } from "react-redux"
 
 const Table = () => {

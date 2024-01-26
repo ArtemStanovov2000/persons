@@ -1,14 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { countCellInString, countStringInSpace } from "../data/data";
-
-const space = []
-for (let i = 0; i < countStringInSpace; i++) {
-    const string = []
-    for (let j = 0; j < countCellInString; j++) {
-        string.push(j)
-    }
-    space.push(string)
-}
+import { space } from "../data/initialGameData/InitialGameData";
 
 const startSlice = createSlice({
     name: "start",
