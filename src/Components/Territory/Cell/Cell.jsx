@@ -1,18 +1,15 @@
 import { createUseStyles } from "react-jss";
 import { useSelector } from "react-redux";
 
-const Cell = ({ srtingIndex, cellIndex }) => {
+const Cell = ({ rowIndex, cellIndex }) => {
 
-    let cellData = useSelector(state => state.start.start[srtingIndex][cellIndex])
-
-    console.log(cellData.infrastructure)
+    let cellData = useSelector(state => state.start.start[rowIndex][cellIndex])
 
     const styles = createUseStyles({
         cell: {
             height: "75px",
             width: "75px",
             border: "1px solid #cacaca",
-            backgroundColor: "white",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

@@ -1,15 +1,15 @@
-import String from "../String/String"
+import Row from "../Row/Row"
 import { useSelector } from "react-redux"
 
 const Table = () => {
-    let rer = useSelector(state => state.start.start)
+    let startMap = useSelector(state => state.start.start)
     const style = {
         display: "grid"
     }
     
     return (
         <div style={style}>
-            {rer.map((element, index) => <String stringIndex={index} key={index} cells={element}></String>)}
+            {startMap.map((element, index) => <Row rowIndex={index} key={index} cells={element}/>)}
         </div>
     )
 }

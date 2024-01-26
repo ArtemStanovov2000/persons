@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { space } from "../data/initialGameData/InitialGameData";
+import { territory } from "../data/GameData/InitialGameData";
 
 const startSlice = createSlice({
     name: "start",
     initialState: {
-        start: space
+        start: territory
     },
     reducers: {
         addData(state, action) {

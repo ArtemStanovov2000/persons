@@ -1,9 +1,6 @@
-import { imagesTexture, imagesInfrastructure } from "../img/imageAssets"
+import { imagesTexture } from "../../img/imageAssets"
 
-export const countCellInString = 25
-export const countStringInSpace = 15
-
-export const cellTypeList = {
+export const GroundTypeList = {
     bush: {
         name: "bush",
         destroyCost: 3,
@@ -22,7 +19,6 @@ export const cellTypeList = {
     ground: {
         name: "ground",
         destroyCost: 3,
-        expenses: 3,
         backgroundImage: imagesTexture.ground
 
     },
@@ -41,16 +37,4 @@ export const cellTypeList = {
         destroyCost: 3,
         backgroundImage: imagesTexture.asphalt
     },
-}
-
-export const infrastructureType = {
-    none: {
-        backgroundImage: ""
-    },
-    goverment: {
-        backgroundImage: imagesInfrastructure.goverment
-    },
-    oilWachturm: {
-        backgroundImage: imagesInfrastructure.oilWachturm
-    }
 }
