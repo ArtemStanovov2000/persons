@@ -1,9 +1,9 @@
 import Budget from "./Budget/Budget";
 import RessourceList from "./RessourceList/RessourceList";
 import { createUseStyles } from "react-jss";
-import React from "react";
+import React, { FC } from "react";
 
-const Statistics = () => {
+const Statistics: FC = () => {
 
     const styles = createUseStyles({
         statistics: {

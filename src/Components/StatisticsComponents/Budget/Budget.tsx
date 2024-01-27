@@ -1,8 +1,8 @@
 import { createUseStyles } from "react-jss";
 import { imagesIcons } from "../../../img/imageAssets";
-import React from "react";
+import React, { FC } from "react";
 
-const Budget = () => {
+const Budget: FC = () => {
 
     const styles = createUseStyles({
         budget: {

@@ -1,10 +1,19 @@
 import { TerritoryConst } from "../../Consts/TerritoryConst"
 import { GroundTypeList } from "../../Consts/cellType/groundType"
 import { InfrastructureType } from "../../Consts/cellType/infrastructureType"
+import InfrastructureTypeInstance from "../../Consts/cellType/infrastructureType"
+import GroundTypeInstance from "../../Consts/cellType/groundType"
+
+interface CellType {
+    texture: GroundTypeInstance,
+    infrastructure: InfrastructureTypeInstance
+}
+
+export default CellType
 
 const createRandomType = function () {
     const randomNumber = Math.random()
-    let cellType
+    let cellType: CellType
     if (randomNumber > 0.99) {
         cellType = {
             texture: GroundTypeList.grass,
@@ -23,9 +32,9 @@ const createRandomType = function () {
     }
     return cellType
 }
- 
 
-export const territory = []
+
+export const territory: Array<Array<CellType>> = []
 for (let i = 0; i < TerritoryConst.countStringInSpace; i++) {
     const string = []
     for (let j = 0; j < TerritoryConst.countCellInString; j++) {

@@ -1,6 +1,16 @@
 import { imagesInfrastructure } from "../../img/imageAssets"
 
-export const InfrastructureType = {
+interface InfrastructureTypeInstance {
+    backgroundImage: string
+}
+
+export default InfrastructureTypeInstance;
+
+interface InfrastructureTypeList {
+    [U: string]: InfrastructureTypeInstance
+}
+
+export const InfrastructureType: InfrastructureTypeList = {
     none: {
         backgroundImage: ""
     },

@@ -1,21 +1,25 @@
-export const imagesTexture = {
+interface Image {
+    [U: string]: string
+}
+
+export const imagesTexture: Image = {
     bush: require("./bush.png"),
     forest: require("./forest.png"),
     grass: require("./grass.png"),
     ground: require("./ground.png"),
     undergrowth: require("./undergrowth.png"),
     paving: require("./paving.png"),
-    asphalt: require("./asphalt.png"),
+    asphalt: require("./asphalt.png")
 }
 
-export const imagesIcons = {
+export const imagesIcons: Image = {
     coin: require("./coin.png"),
     oil: require("./oil.png"),
     people: require("./people.png"),
     worker: require("./worker.png"),
 }
 
-export const imagesInfrastructure = {
+export const imagesInfrastructure: Image = {
     goverment: require("./goverment.png"),
     oilWachturm: require("./oilWachturm.png"),
 }

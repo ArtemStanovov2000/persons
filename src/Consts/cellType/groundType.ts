@@ -1,6 +1,18 @@
 import { imagesTexture } from "../../img/imageAssets"
 
-export const GroundTypeList = {
+interface GroundTypeInstance {
+    name: string,
+    destroyCost: number,
+    backgroundImage: string
+}
+
+export default GroundTypeInstance
+
+interface GroundType {
+    [U: string]: GroundTypeInstance
+}
+
+export const GroundTypeList: GroundType = {
     bush: {
         name: "bush",
         destroyCost: 3,

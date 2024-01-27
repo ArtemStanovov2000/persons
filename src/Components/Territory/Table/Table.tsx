@@ -2,12 +2,12 @@ import Row from "../Row/Row"
 import { useSelector } from "react-redux"
 import React from "react";
 
-interface Sss {
+interface State {
     start: any;
 }
 
 const Table = () => {
-    let startMap = useSelector((state: Sss) => state.start.start)
+    let startMap = useSelector((state: State) => state.start.start)
     const style = {
         display: "grid"
     }

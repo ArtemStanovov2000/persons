@@ -1,12 +1,13 @@
 import Cell from "../Cell/Cell"
 import React, {FC} from "react";
+import CellType from "../../../data/GameData/InitialGameData";
 
 interface Props {
-    cells: any;
-    rowIndex: any;
+    cells: [CellType];
+    rowIndex: number;
 }
 
-const Row: FC<Props> = ({ cells, rowIndex }: Props) => {
+const Row: FC<Props> = ({ cells, rowIndex }) => {
 
     const style = {
         display: "flex"
@@ -14,7 +15,7 @@ const Row: FC<Props> = ({ cells, rowIndex }: Props) => {
 
     return (
         <div style={style}>{
-            cells.map((element: any, index: any) => <Cell rowIndex={rowIndex} cellIndex={index} key={index}/>)
+            cells.map((element: CellType, index: number) => <Cell rowIndex={rowIndex} cellIndex={index} key={index}/>)
         }</div>
     )
 }
