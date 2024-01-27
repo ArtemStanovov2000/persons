@@ -1,9 +1,19 @@
 import { createUseStyles } from "react-jss";
 import { useSelector } from "react-redux";
+import React, {FC} from "react";
 
-const Cell = ({ rowIndex, cellIndex }) => {
+interface Props {
+    rowIndex: any;
+    cellIndex: any;
+}
 
-    let cellData = useSelector(state => state.start.start[rowIndex][cellIndex])
+interface Sss {
+    start: any;
+}
+
+const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
+
+    let cellData: any = useSelector<unknown, any>((state: Sss) => state.start.start[rowIndex][cellIndex])
 
     const styles = createUseStyles({
         cell: {

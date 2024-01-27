@@ -5,7 +5,7 @@ const startSlice = createSlice({
     name: "start",
     initialState: {
         start: territory
-    },
+    } as object,
     reducers: {
         addData(state, action) {
             console.log(state)
@@ -14,5 +14,5 @@ const startSlice = createSlice({
     }
 })
 
-export const { addData, addDataResult } = startSlice.actions
+export const { addData } = startSlice.actions
 export default startSlice.reducer

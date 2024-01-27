@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss";
 import Table from "./Territory/Table/Table";
 import Statistics from "./StatisticsComponents/Statistics";
+import React from "react";
 
 const Window = () => {
 
