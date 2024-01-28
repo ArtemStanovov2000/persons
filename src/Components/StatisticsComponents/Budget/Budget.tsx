@@ -1,8 +1,11 @@
 import { createUseStyles } from "react-jss";
 import { imagesIcons } from "../../../img/imageAssets";
 import React, { FC } from "react";
+import { useSelector } from "react-redux";
 
 const Budget: FC = () => {
+
+    const ressource: any = useSelector<unknown, any>((state: any) => state.ressource)
 
     const styles = createUseStyles({
         budget: {
@@ -31,10 +34,10 @@ const Budget: FC = () => {
 
     return (
         <div className={classes.budget}>
-            <p className={classes.budgetDeck}>Количество монет</p>
+            <p className={classes.budgetDeck}>Государственный бюджет</p>
             <div className={classes.budgetBox}>
                 <div className={classes.budgetLogo}></div>
-                <div>3000</div>
+                <div>{ressource.govermentBudget}</div>
             </div>
         </div>
     )

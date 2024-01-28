@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface InitialState {
-    time: number
-}
-
 const ressourceSlice = createSlice({
     name: "ressource",
     initialState: {
-        time: 0
-    } as InitialState,
+        time: 0,
+        oil: 30,
+        people: 1000,
+        workerPeople: 570,
+        govermentBudget: 3500
+    },
     reducers: {
         updateStatusResources(state, action) {
-            console.log(state)
-            console.log(action)
+            state.govermentBudget += action.payload
+            state.govermentBudget = Number(state.govermentBudget.toFixed(4))
         }
     }
 })

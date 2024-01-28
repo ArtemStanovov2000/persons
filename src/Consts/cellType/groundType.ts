@@ -36,7 +36,7 @@ export const GroundTypeList: GroundType = {
         name: "земля",
         destroyCost: 3,
         backgroundImage: imagesTexture.ground,
-        maintenanceCosts: 0.05
+        maintenanceCosts: -0.005
 
     },
     undergrowth: {
@@ -49,12 +49,12 @@ export const GroundTypeList: GroundType = {
         name: "брусчатка",
         destroyCost: 3,
         backgroundImage: imagesTexture.paving,
-        maintenanceCosts: 0.2
+        maintenanceCosts: -0.02
     },
     asphalt: {
         name: "асфальт",
         destroyCost: 3,
         backgroundImage: imagesTexture.asphalt,
-        maintenanceCosts: 0.1
+        maintenanceCosts: -0.01
     },
 }

@@ -2,8 +2,11 @@ import { createUseStyles } from "react-jss";
 import { imagesIcons } from "../../../img/imageAssets";
 import React, { FC } from "react";
 import RessourceItem from "./RessourceItem.tsx/RessourceItem";
+import { useSelector } from "react-redux";
 
 const RessourceList: FC = () => {
+
+    const ressource: any = useSelector<unknown, any>((state: any) => state.ressource)
 
     const styles = createUseStyles({
         ressourceStatistics: {
@@ -50,9 +53,9 @@ const RessourceList: FC = () => {
     return (
         <div className={classes.ressourceStatistics}>
             <p className={classes.boxDeck}>Ресурсы:</p>
-            <RessourceItem icon={classes.oilIcon} label={"Нефть"} value={30}/>
-            <RessourceItem icon={classes.peopleIcon} label={"Люди:"} value={1000}/>
-            <RessourceItem icon={classes.workerIcon} label={"Трудоспособные:"} value={570}/>
+            <RessourceItem icon={classes.oilIcon} label={"Нефть"} value={ressource.oil}/>
+            <RessourceItem icon={classes.peopleIcon} label={"Люди:"} value={ressource.people}/>
+            <RessourceItem icon={classes.workerIcon} label={"Трудоспособные:"} value={ressource.workerPeople}/>
         </div>
     )
 }
