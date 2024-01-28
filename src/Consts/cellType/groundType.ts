@@ -3,7 +3,8 @@ import { imagesTexture } from "../../img/imageAssets"
 interface GroundTypeInstance {
     name: string,
     destroyCost: number,
-    backgroundImage: string
+    backgroundImage: string,
+    maintenanceCosts: number
 }
 
 export default GroundTypeInstance
@@ -14,39 +15,46 @@ interface GroundType {
 
 export const GroundTypeList: GroundType = {
     bush: {
-        name: "bush",
+        name: "кусты",
         destroyCost: 3,
-        backgroundImage: imagesTexture.bush
+        backgroundImage: imagesTexture.bush,
+        maintenanceCosts: 0
     },
     forest: {
-        name: "forest",
+        name: "лес",
         destroyCost: 3,
-        backgroundImage: imagesTexture.forest
+        backgroundImage: imagesTexture.forest,
+        maintenanceCosts: 0
     },
     grass: {
-        name: "grass",
+        name: "трава",
         destroyCost: 3,
-        backgroundImage: imagesTexture.grass
+        backgroundImage: imagesTexture.grass,
+        maintenanceCosts: 0
     },
     ground: {
-        name: "ground",
+        name: "земля",
         destroyCost: 3,
-        backgroundImage: imagesTexture.ground
+        backgroundImage: imagesTexture.ground,
+        maintenanceCosts: 0.05
 
     },
     undergrowth: {
-        name: "undergrowth",
+        name: "подлесок",
         destroyCost: 3,
-        backgroundImage: imagesTexture.undergrowth
+        backgroundImage: imagesTexture.undergrowth,
+        maintenanceCosts: 0
     },
     paving: {
-        name: "paving",
+        name: "брусчатка",
         destroyCost: 3,
-        backgroundImage: imagesTexture.paving
+        backgroundImage: imagesTexture.paving,
+        maintenanceCosts: 0.2
     },
     asphalt: {
-        name: "asphalt",
+        name: "асфальт",
         destroyCost: 3,
-        backgroundImage: imagesTexture.asphalt
+        backgroundImage: imagesTexture.asphalt,
+        maintenanceCosts: 0.1
     },
 }

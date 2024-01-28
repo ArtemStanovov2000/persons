@@ -9,13 +9,9 @@ interface Props {
     cellIndex: number;
 }
 
-interface State {
-    start: any;
-}
-
 const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
 
-    let cellData: CellType = useSelector<unknown, any>((state: State) => state.start.start[rowIndex][cellIndex])
+    let cellData: CellType = useSelector<unknown, any>((state: any) => state.start.start[rowIndex][cellIndex])
 
     const styles = createUseStyles({
         cell: {

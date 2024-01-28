@@ -1,14 +1,17 @@
 import { createUseStyles } from "react-jss";
-import { imagesIcons } from "../../../img/imageAssets";
 import React, { FC } from "react";
-import RessourceItem from "./RessourceItem.tsx/RessourceItem";
 
-const RessourceList: FC = () => {
+interface Props {
+    icon: any;
+    label: string;
+    value: number;
+}
+
+const RessourceItem: FC<Props> = ({icon, label, value}) => {
 
     const styles = createUseStyles({
         ressourceStatistics: {
             backgroundColor: "white",
-            padding: "15px",
             display: "grid",
             gap: "10px"
         },
@@ -33,15 +36,6 @@ const RessourceList: FC = () => {
         ressourceDeck: {
             fontSize: "14px",
             margin: "0"
-        }, 
-        oilIcon: {
-            backgroundImage: `url(${imagesIcons.oil})`
-        }, 
-        peopleIcon: {
-            backgroundImage: `url(${imagesIcons.people})`
-        },
-        workerIcon: {
-            backgroundImage: `url(${imagesIcons.worker})`
         }
     });
 
@@ -49,12 +43,15 @@ const RessourceList: FC = () => {
 
     return (
         <div className={classes.ressourceStatistics}>
-            <p className={classes.boxDeck}>Ресурсы:</p>
-            <RessourceItem icon={classes.oilIcon} label={"Нефть"} value={30}/>
-            <RessourceItem icon={classes.peopleIcon} label={"Люди:"} value={1000}/>
-            <RessourceItem icon={classes.workerIcon} label={"Трудоспособные:"} value={570}/>
+            <div className={classes.ressourceBox}>
+                <div className={classes.nameRessourceBox}>
+                    <div className={`${classes.ressourceImg} ${icon}`}></div>
+                    <p className={classes.ressourceDeck}>{label}</p>
+                </div>
+                <p className={classes.ressourceDeck}>{value}</p>
+            </div>
         </div>
     )
 }
 
-export default RessourceList
+export default RessourceItem

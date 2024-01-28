@@ -1,7 +1,8 @@
 import { imagesInfrastructure } from "../../img/imageAssets"
 
 interface InfrastructureTypeInstance {
-    backgroundImage: string
+    backgroundImage: string,
+    humanResources: number
 }
 
 export default InfrastructureTypeInstance;
@@ -12,12 +13,15 @@ interface InfrastructureTypeList {
 
 export const InfrastructureType: InfrastructureTypeList = {
     none: {
-        backgroundImage: ""
+        backgroundImage: "",
+        humanResources: 0
     },
     goverment: {
-        backgroundImage: imagesInfrastructure.goverment
+        backgroundImage: imagesInfrastructure.goverment,
+        humanResources: 10
     },
     oilWachturm: {
-        backgroundImage: imagesInfrastructure.oilWachturm
+        backgroundImage: imagesInfrastructure.oilWachturm,
+        humanResources: 3
     }
 }
