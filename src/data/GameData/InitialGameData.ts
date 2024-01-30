@@ -43,12 +43,47 @@ for (let i = 0; i < TerritoryConst.countStringInSpace; i++) {
     territory.push(string)
 }
 
+// Дом правительства
 territory[7][13] = {
     texture: GroundTypeList.asphalt,
     infrastructure: InfrastructureType.goverment
 }
-territory[7][12] = {
+
+// Нефтяные вышки
+territory[10][4] = {
     texture: GroundTypeList.grass,
     infrastructure: InfrastructureType.oilWachturm
+}
+territory[11][4] = {
+    texture: GroundTypeList.grass,
+    infrastructure: InfrastructureType.oilWachturm
+}
+
+// Сельскохозяйственная земля
+for (let i = 1; i < 6; i++) {
+    for (let j = 1; j < 5; j++) {
+        territory[i][j] = {
+            texture: GroundTypeList.ground,
+            infrastructure: InfrastructureType.none
+        }
+    }
+}
+
+// Нефтеперерабатывающий завод
+territory[10][5] = {
+    texture: GroundTypeList.grass,
+    infrastructure: InfrastructureType.oilFactory
+}
+
+// Ферма
+territory[6][4] = {
+    texture: GroundTypeList.grass,
+    infrastructure: InfrastructureType.farm
+}
+
+// Магазин
+territory[7][12] = {
+    texture: GroundTypeList.asphalt,
+    infrastructure: InfrastructureType.shop
 }
 

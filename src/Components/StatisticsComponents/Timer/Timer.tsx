@@ -17,10 +17,10 @@ const Timer: FC = () => {
     territory.forEach(element => {
         element.forEach(innerElement => {
             maintenanceCostsSum += innerElement.texture.maintenanceCosts
+            maintenanceCostsSum += innerElement.infrastructure.maintenanceCosts
         });
     });
-    console.log(maintenanceCostsSum)
-
+    
     useEffect(() => {
         const timer = setTimeout(() => {
             setTime((prev: number) => prev + 1);

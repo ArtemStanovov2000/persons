@@ -22,4 +22,7 @@ export const imagesIcons: Image = {
 export const imagesInfrastructure: Image = {
     goverment: require("./goverment.png"),
     oilWachturm: require("./oilWachturm.png"),
+    oilFactory: require("./oilFactory.png"),
+    farm: require("./farm.png"),
+    shop: require("./shop.png"),
 }
