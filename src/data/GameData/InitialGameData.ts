@@ -87,3 +87,18 @@ territory[7][12] = {
     infrastructure: InfrastructureType.shop
 }
 
+// Магазин
+territory[11][5] = {
+    texture: GroundTypeList.asphalt,
+    infrastructure: InfrastructureType.powerPlant
+}
+
+// Жилые дома
+for (let i = 1; i < 6; i++) {
+    for (let j = 7; j < 15; j++) {
+        territory[i][j] = {
+            texture: GroundTypeList.asphalt,
+            infrastructure: InfrastructureType.home
+        }
+    }
+}

@@ -25,4 +25,6 @@ export const imagesInfrastructure: Image = {
     oilFactory: require("./oilFactory.png"),
     farm: require("./farm.png"),
     shop: require("./shop.png"),
+    powerPlant: require("./powerPlant.png"),
+    home: require("./home.png"),
 }
