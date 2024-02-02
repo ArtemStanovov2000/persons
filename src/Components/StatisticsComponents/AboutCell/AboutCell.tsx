@@ -76,16 +76,16 @@ const AboutCell: FC = () => {
                 <article className={classes.aboutTypeList}>
                     <h3 className={classes.title}>О территории</h3>
                     <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Тип</p>
-                        <div>{aboutCellData.texture.name}</div>
+                        <p className={classes.typeitemDeck}>{aboutCellData.texture.name.name}</p>
+                        <div>{aboutCellData.texture.name.value}</div>
                     </div>
                     <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Стоимость разрушения</p>
-                        <div>{aboutCellData.texture.destroyCost}</div>
+                        <p className={classes.typeitemDeck}>{aboutCellData.texture.destroyCost.name}</p>
+                        <div>{aboutCellData.texture.destroyCost.value}</div>
                     </div>
                     <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Госрасходы</p>
-                        <div>{aboutCellData.texture.maintenanceCosts}</div>
+                        <p className={classes.typeitemDeck}>{aboutCellData.texture.maintenanceCosts.name}</p>
+                        <div>{aboutCellData.texture.maintenanceCosts.value}</div>
                     </div>
                 </article>
                 <article className={classes.aboutTypeList}>

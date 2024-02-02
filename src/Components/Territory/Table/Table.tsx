@@ -12,8 +12,10 @@ const Table = () => {
 
     const styles = createUseStyles({
         statistics: {
-            display: "grid",
-            marginBottom: "250px"
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "250px",
+            marginLeft: "300px",
         }
     });
 

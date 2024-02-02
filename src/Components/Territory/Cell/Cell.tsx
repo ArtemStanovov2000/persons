@@ -21,6 +21,7 @@ const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
             border: `1px solid ${Colors.black}`,
             display: "flex",
             justifyContent: "center",
+            flexShrink: "0",
             alignItems: "center",
             backgroundImage: `url(${cellData.infrastructure.backgroundImage}), url(${cellData.texture.backgroundImage})`,
             backgroundSize: "100% 100%",

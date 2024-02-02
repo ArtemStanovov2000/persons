@@ -2,6 +2,7 @@ import { createUseStyles } from "react-jss";
 import Table from "./Territory/Table/Table";
 import React, { FC } from "react";
 import Statistics from "./StatisticsComponents/Statistics";
+import DetailedDescription from "./DetailedDescription/DetailedDescription";
 
 const Window: FC = () => {
 
@@ -17,6 +18,7 @@ const Window: FC = () => {
         <div className={classes.window}>
             <Table/>
             <Statistics/>
+            <DetailedDescription/>
         </div>
     )
 }

@@ -1,17 +1,21 @@
 import { imagesTexture } from "../../img/imageAssets"
 
-/**
- * Тип поверхности
- */
+interface Parameter {
+    // Название параметра
+    name: string,
+    // Значение параметра
+    value: number | string
+}
+
 interface GroundTypeInstance {
     // Название типа поверхности
-    name: string,
+    name: Parameter,
     // Стоимость разрушения
-    destroyCost: number,
+    destroyCost: Parameter,
     // Изображение поверхности
     backgroundImage: string,
     // Затраты на содержание
-    maintenanceCosts: number
+    maintenanceCosts: Parameter
 }
 
 export default GroundTypeInstance
@@ -22,46 +26,109 @@ interface GroundType {
 
 export const GroundTypeList: GroundType = {
     bush: {
-        name: "кусты",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "кусты"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.bush,
-        maintenanceCosts: 0
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0
+        }
     },
     forest: {
-        name: "лес",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "Лес"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.forest,
-        maintenanceCosts: 0
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0
+        }
     },
     grass: {
-        name: "трава",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "Трава"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.grass,
-        maintenanceCosts: 0
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0
+        }
     },
     ground: {
-        name: "земля",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "Земля"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.ground,
-        maintenanceCosts: -0.005
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0.005
+        }
 
     },
     undergrowth: {
-        name: "подлесок",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "кусты"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.undergrowth,
-        maintenanceCosts: 0
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0
+        }
     },
     paving: {
-        name: "брусчатка",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "Брусчатка"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.paving,
-        maintenanceCosts: -0.02
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0.02
+        }
     },
     asphalt: {
-        name: "асфальт",
-        destroyCost: 3,
+        name: {
+            name: "Тип",
+            value: "Асфальт"
+        },
+        destroyCost: {
+            name: "Строимость разрушения",
+            value: 3
+        },
         backgroundImage: imagesTexture.asphalt,
-        maintenanceCosts: -0.01
+        maintenanceCosts: {
+            name: "Госрасходы",
+            value: 0.01
+        }
     },
 }

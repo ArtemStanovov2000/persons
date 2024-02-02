@@ -5,10 +5,19 @@ const aboutCellSlice = createSlice({
     initialState: {
         data: {
             texture: {
-                name: "кусты",
-                destroyCost: 3,
+                name: {
+                    name: "Тип",
+                    value: "Лес"
+                },
+                destroyCost: {
+                    name: "Строимость разрушения",
+                    value: 3
+                },
                 backgroundImage: "",
-                maintenanceCosts: 0
+                maintenanceCosts: {
+                    name: "Госрасходы",
+                    value: 0
+                }
             },
             infrastructure: {
                 name: "Пустая клетка",
