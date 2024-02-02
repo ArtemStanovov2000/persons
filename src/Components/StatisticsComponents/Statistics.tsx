@@ -1,18 +1,24 @@
-import Budget from "./Budget/Budget";
-import RessourceList from "./RessourceList/RessourceList";
 import { createUseStyles } from "react-jss";
 import React, { FC } from "react";
-import Timer from "./Timer/Timer";
-
+import AboutCell from "./AboutCell/AboutCell";
+import GovermentRessource from "./GovermentRessource/GovermentRessource";
+import Parameters from "./Parameters/Parameters";
+import { Colors } from "../../Consts/colors";
 const Statistics: FC = () => {
 
     const styles = createUseStyles({
         statistics: {
             position: "fixed",
-            top: "100px",
-            right: "20px",
-            display: "grid",
-            gap: "10px"
+            display: "flex",
+            gap: "10px",
+            bottom: "0",
+            left: "8px",
+            width: "1892px",
+            height: "250px",
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            backgroundColor: `${Colors.darkGreen}`,
+            boxShadow: "0px -4px 8px -1px rgba(240, 255, 0, 0.49)"
         }
     });
 
@@ -20,9 +26,9 @@ const Statistics: FC = () => {
 
     return (
         <div className={classes.statistics}>
-            <Budget/>
-            <RessourceList/>
-            <Timer/>
+            <AboutCell/>
+            <GovermentRessource/>
+            <Parameters/>
         </div>
     )
 }

@@ -1,9 +1,16 @@
 import { imagesTexture } from "../../img/imageAssets"
 
+/**
+ * Тип поверхности
+ */
 interface GroundTypeInstance {
+    // Название типа поверхности
     name: string,
+    // Стоимость разрушения
     destroyCost: number,
+    // Изображение поверхности
     backgroundImage: string,
+    // Затраты на содержание
     maintenanceCosts: number
 }
 

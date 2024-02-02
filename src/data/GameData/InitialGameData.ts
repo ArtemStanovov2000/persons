@@ -71,7 +71,7 @@ for (let i = 1; i < 6; i++) {
 
 // Нефтеперерабатывающий завод
 territory[10][5] = {
-    texture: GroundTypeList.grass,
+    texture: GroundTypeList.asphalt,
     infrastructure: InfrastructureType.oilFactory
 }
 

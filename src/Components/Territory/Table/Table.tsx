@@ -1,6 +1,7 @@
 import Row from "../Row/Row"
 import { useSelector } from "react-redux"
 import React from "react";
+import { createUseStyles } from "react-jss";
 
 interface State {
     start: any;
@@ -8,12 +9,18 @@ interface State {
 
 const Table = () => {
     let startMap = useSelector((state: State) => state.start.start)
-    const style = {
-        display: "grid"
-    }
+
+    const styles = createUseStyles({
+        statistics: {
+            display: "grid",
+            marginBottom: "250px"
+        }
+    });
+
+    const classes = styles()
     
     return (
-        <div style={style}>
+        <div className={classes.statistics}>
             {startMap.map((element: any, index: any) => <Row rowIndex={index} key={index} cells={element}/>)}
         </div>
     )

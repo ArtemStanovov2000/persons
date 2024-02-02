@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
+import population from "../data/GameData/population";
+import { countWorkerPeoples } from "../data/GameData/population";
 
 const ressourceSlice = createSlice({
     name: "ressource",
     initialState: {
         time: 0,
         oil: 30,
-        people: 1000,
-        workerPeople: 570,
-        govermentBudget: 3500
+        people: population.length,
+        workerPeople: countWorkerPeoples(),
+        govermentBudget: 3500,
+        savingsBudget: 40
     },
     reducers: {
         updateStatusResources(state, action) {

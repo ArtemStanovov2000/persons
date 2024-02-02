@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import Table from "./Territory/Table/Table";
-import Statistics from "./StatisticsComponents/Statistics";
 import React, { FC } from "react";
+import Statistics from "./StatisticsComponents/Statistics";
 
 const Window: FC = () => {
 
@@ -15,8 +15,8 @@ const Window: FC = () => {
 
     return (
         <div className={classes.window}>
-            <Statistics/>
             <Table/>
+            <Statistics/>
         </div>
     )
 }

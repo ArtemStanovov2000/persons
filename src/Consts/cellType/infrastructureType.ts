@@ -1,13 +1,24 @@
 import { imagesInfrastructure } from "../../img/imageAssets"
 
+/**
+ * Тип инфтраструктуры
+ */
 interface InfrastructureTypeInstance {
+    // Название инфраструктуры
     name: string,
+    // Изображение Инфтраструктуры
     backgroundImage: string,
+    // Необходимое количество рабочих мест
     humanResources: number,
+    // Затраты на содержание
     maintenanceCosts: number,
+    // Производство нефти
     oilProduction: number,
+    // Производство электричества
     electricityProduction: number,
+    // Производство топлива
     fuelProduction: number,
+    // Количество жильцов
     capacityPeople: number
 }
 
@@ -49,7 +60,7 @@ export const InfrastructureType: InfrastructureTypeList = {
         capacityPeople: 0
     },
     oilFactory: {
-        name: "Нефтеперерабатывающий завод",
+        name: "НПЗ",
         backgroundImage: imagesInfrastructure.oilFactory,
         humanResources: 7,
         maintenanceCosts: -0.04,

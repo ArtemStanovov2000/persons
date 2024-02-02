@@ -1,8 +1,9 @@
 import { createUseStyles } from "react-jss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import React, {FC} from "react";
 import { Colors } from "../../../Consts/colors";
 import CellType from "../../../data/GameData/InitialGameData";
+import { setStateInformation } from "../../../store/aboutCellSlice";
 
 interface Props {
     rowIndex: number;
@@ -34,8 +35,13 @@ const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
 
     const classes = styles()
 
+    const dispatch = useDispatch()
+    const setData = () => {
+        dispatch(setStateInformation(cellData))
+    }
+
     return (
-        <div className={classes.cell}>{}</div>
+        <div onClick={setData} className={classes.cell}>{}</div>
     )
 }
 
