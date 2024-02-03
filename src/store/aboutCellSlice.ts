@@ -22,12 +22,6 @@ const aboutCellSlice = createSlice({
             infrastructure: {
                 name: "Пустая клетка",
                 backgroundImage: "",
-                humanResources: 0,
-                maintenanceCosts: 0,
-                oilProduction: 0,
-                electricityProduction: 0,
-                fuelProduction: 0,
-                capacityPeople: 0
             }
         }
     },

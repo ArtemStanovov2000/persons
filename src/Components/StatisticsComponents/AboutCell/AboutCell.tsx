@@ -93,31 +93,7 @@ const AboutCell: FC = () => {
                     <div className={classes.typeItem}>
                         <p className={classes.typeitemDeck}>Тип</p>
                         <div>{aboutCellData.infrastructure.name}</div>
-                    </div> 
-                    {aboutCellData.infrastructure.humanResources !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Требуется людей</p>
-                        <div>{aboutCellData.infrastructure.humanResources}</div>
-                    </div> : ""}
-                    {aboutCellData.infrastructure.maintenanceCosts !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Госрасходы</p>
-                        <div>{aboutCellData.infrastructure.maintenanceCosts}</div>
-                    </div> : ""}
-                    {aboutCellData.infrastructure.oilProduction !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Производство нефти</p>
-                        <div>{aboutCellData.infrastructure.oilProduction}</div>
-                    </div> : ""}
-                    {aboutCellData.infrastructure.electricityProduction !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Производство энергии</p>
-                        <div>{aboutCellData.infrastructure.electricityProduction}</div>
-                    </div> : ""}
-                    {aboutCellData.infrastructure.fuelProduction !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Производство топлива</p>
-                        <div>{aboutCellData.infrastructure.fuelProduction}</div>
-                    </div> : ""}
-                    {aboutCellData.infrastructure.capacityPeople !== 0 ? <div className={classes.typeItem}>
-                        <p className={classes.typeitemDeck}>Население</p>
-                        <div>{aboutCellData.infrastructure.capacityPeople}</div>
-                    </div> : ""}
+                    </div>
                 </article>
             </div>
         </section>
