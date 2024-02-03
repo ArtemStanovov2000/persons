@@ -1,6 +1,9 @@
 import { createUseStyles } from "react-jss";
 import React, { FC } from "react";
 import { Colors } from "../../Consts/colors";
+import { useDispatch } from "react-redux";
+import { setPageReducer } from "../../store/pageSlice";
+
 const Statistics: FC = () => {
 
     const styles = createUseStyles({
@@ -20,10 +23,12 @@ const Statistics: FC = () => {
 
     const classes = styles()
 
+    const dispatch = useDispatch()
+
     return (
         <div className={classes.statistics}>
-            <button>{"button 1"}</button>
-            <button>{"button 2"}</button>
+            <button onClick={() => dispatch(setPageReducer("button1"))}>{"button1"}</button>
+            <button onClick={() => dispatch(setPageReducer("button2"))}>{"button2"}</button>
         </div>
     )
 }

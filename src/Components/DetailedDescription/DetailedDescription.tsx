@@ -2,8 +2,11 @@ import React, {FC} from "react";
 import { createUseStyles } from "react-jss";
 import { Colors } from "../../Consts/colors";
 import AboutCell from "./AboutCell/AboutCell";
+import Ressources from "./Ressources/Ressources";
+import { useSelector } from "react-redux";
 
 const DetailedDescription: FC = () => {
+    const page: any = useSelector((state: any) => state.page.page)
 
     const elementHeight = window.innerHeight - 250
 
@@ -26,7 +29,8 @@ const DetailedDescription: FC = () => {
 
     return(
         <section className={classes.detailed}>
-            <AboutCell/>
+            {page === "button1" && <AboutCell/>}
+            {page === "button2" && <Ressources/>}
         </section>
     )
 }

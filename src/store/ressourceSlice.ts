@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import population from "../data/GameData/population";
 import { countWorkerPeoples } from "../data/GameData/population";
+import { countChildrens, countPensioners } from "../data/GameData/population";
 
 const ressourceSlice = createSlice({
     name: "ressource",
@@ -10,9 +11,17 @@ const ressourceSlice = createSlice({
                 name: "Всего людей",
                 value: population.length
             },
-            workerPeople: {
+            workerPeoples: {
                 name: "Трудоспособных",
                 value: countWorkerPeoples()
+            },
+            pensioners: {
+                name: "Пенсионеров",
+                value: countPensioners()
+            },
+            childrens: {
+                name: "Детей",
+                value: countChildrens()
             },
         },
         fossils: {
@@ -32,7 +41,7 @@ const ressourceSlice = createSlice({
             },
             savingsBudget: {
                 name: "Резервы",
-                value: 42716
+                value: 400
             }
         }
     },
