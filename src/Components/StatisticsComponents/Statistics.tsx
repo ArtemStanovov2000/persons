@@ -22,6 +22,8 @@ const Statistics: FC = () => {
 
     return (
         <div className={classes.statistics}>
+            <button>{"button 1"}</button>
+            <button>{"button 2"}</button>
         </div>
     )
 }

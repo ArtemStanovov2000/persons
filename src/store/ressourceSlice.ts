@@ -5,17 +5,39 @@ import { countWorkerPeoples } from "../data/GameData/population";
 const ressourceSlice = createSlice({
     name: "ressource",
     initialState: {
-        time: 0,
-        oil: 30,
-        people: population.length,
-        workerPeople: countWorkerPeoples(),
-        govermentBudget: 3500,
-        savingsBudget: 40
+        people: {
+            population: {
+                name: "Всего людей",
+                value: population.length
+            },
+            workerPeople: {
+                name: "Трудоспособных",
+                value: countWorkerPeoples()
+            },
+        },
+        fossils: {
+            extractedOil: {
+                name: "Добытой нефти",
+                value: 30
+            },
+            exploredOil: {
+                name: "Разведанной нефти",
+                value: 42716
+            }
+        },
+        money: {
+            govermentBudget: {
+                name: "Бюджет",
+                value: 4000
+            },
+            savingsBudget: {
+                name: "Резервы",
+                value: 42716
+            }
+        }
     },
     reducers: {
         updateStatusResources(state, action) {
-            state.govermentBudget += action.payload
-            state.govermentBudget = Number(state.govermentBudget.toFixed(4))
         }
     }
 })
