@@ -1,11 +1,15 @@
 import { imagesInfrastructure } from "../../img/imageAssets"
 
-/**
- * Тип инфтраструктуры
- */
+interface Parameter {
+    // Название параметра
+    name: string,
+    // Значение параметра
+    value: number | string
+}
+
 interface InfrastructureTypeInstance {
     // Название инфраструктуры
-    name: string,
+    name: Parameter,
     // Изображение Инфтраструктуры
     backgroundImage: string
 }
@@ -18,35 +22,59 @@ interface InfrastructureTypeList {
 
 export const InfrastructureType: InfrastructureTypeList = {
     none: {
-        name: "Пустая клетка",
+        name: {
+            name: "Тип",
+            value: "Пусто"
+        },
         backgroundImage: "",
     },
     goverment: {
-        name: "Дом правительства",
+        name: {
+            name: "Тип",
+            value: "Дом правительства"
+        },
         backgroundImage: imagesInfrastructure.goverment,
     },
     oilWachturm: {
-        name: "Нефтяная вышка",
+        name: {
+            name: "Тип",
+            value: "Нефтяная вышка"
+        },
         backgroundImage: imagesInfrastructure.oilWachturm,
     },
     oilFactory: {
-        name: "НПЗ",
+        name: {
+            name: "Тип",
+            value: "НПЗ"
+        },
         backgroundImage: imagesInfrastructure.oilFactory,
     },
     shop: {
-        name: "Магазин",
+        name: {
+            name: "Тип",
+            value: "Магазин"
+        },
         backgroundImage: imagesInfrastructure.shop,
     },
     farm: {
-        name: "Ферма",
+        name: {
+            name: "Тип",
+            value: "Ферма"
+        },
         backgroundImage: imagesInfrastructure.farm,
     },
     powerPlant: {
-        name: "ТЭЦ",
+        name: {
+            name: "Тип",
+            value: "ТЭЦ"
+        },
         backgroundImage: imagesInfrastructure.powerPlant
     },
     home: {
-        name: "Жилой дом",
+        name: {
+            name: "Тип",
+            value: "Жилой дом"
+        },
         backgroundImage: imagesInfrastructure.home,
     }
 }

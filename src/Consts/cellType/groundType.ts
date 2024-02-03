@@ -13,7 +13,7 @@ interface GroundTypeInstance {
     // Стоимость разрушения
     destroyCost: Parameter,
     // Изображение поверхности
-    backgroundImage: string,
+    backgroundImage: Parameter,
     // Затраты на содержание
     maintenanceCosts: Parameter
 }
@@ -34,7 +34,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.bush,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.bush
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0
@@ -49,7 +52,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.forest,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.forest
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0
@@ -64,7 +70,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.grass,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.grass
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0
@@ -79,7 +88,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.ground,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.ground
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0.005
@@ -95,7 +107,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.undergrowth,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.undergrowth
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0
@@ -110,7 +125,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.paving,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.paving
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0.02
@@ -125,7 +143,10 @@ export const GroundTypeList: GroundType = {
             name: "Строимость разрушения",
             value: 3
         },
-        backgroundImage: imagesTexture.asphalt,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesTexture.asphalt
+        },
         maintenanceCosts: {
             name: "Госрасходы",
             value: 0.01

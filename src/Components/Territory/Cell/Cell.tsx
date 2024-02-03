@@ -23,7 +23,7 @@ const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
             justifyContent: "center",
             flexShrink: "0",
             alignItems: "center",
-            backgroundImage: `url(${cellData.infrastructure.backgroundImage}), url(${cellData.texture.backgroundImage})`,
+            backgroundImage: `url(${cellData.infrastructure.backgroundImage}), url(${cellData.texture.backgroundImage.value})`,
             backgroundSize: "100% 100%",
             "&:hover": {
                 border: `1px solid ${Colors.red}`

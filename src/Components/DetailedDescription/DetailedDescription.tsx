@@ -4,7 +4,7 @@ import { Colors } from "../../Consts/colors";
 
 const DetailedDescription: FC = () => {
 
-    const windowInnerHeight = window.innerHeight - 250
+    const elementHeight = window.innerHeight - 250
 
     const styles = createUseStyles({
         detailed: {
@@ -13,7 +13,7 @@ const DetailedDescription: FC = () => {
             gap: "10px",
             bottom: "250px",
             width: "280px",
-            height: `${windowInnerHeight}px`,
+            height: `${elementHeight}px`,
             paddingLeft: "10px",
             paddingRight: "10px",
             backgroundColor: `${Colors.darkGreen}`,

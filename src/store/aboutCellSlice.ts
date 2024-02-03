@@ -13,14 +13,20 @@ const aboutCellSlice = createSlice({
                     name: "Строимость разрушения",
                     value: 3
                 },
-                backgroundImage: "",
+                backgroundImage: {
+                    name: "Изображение",
+                    value: ""
+                },
                 maintenanceCosts: {
                     name: "Госрасходы",
                     value: 0
                 }
             },
             infrastructure: {
-                name: "Пустая клетка",
+                name: {
+                    name: "Тип",
+                    value: "Пусто"
+                },
                 backgroundImage: "",
             }
         }

@@ -1,8 +1,5 @@
 import { createUseStyles } from "react-jss";
 import React, { FC } from "react";
-import AboutCell from "./AboutCell/AboutCell";
-import GovermentRessource from "./GovermentRessource/GovermentRessource";
-import Parameters from "./Parameters/Parameters";
 import { Colors } from "../../Consts/colors";
 const Statistics: FC = () => {
 
@@ -25,9 +22,6 @@ const Statistics: FC = () => {
 
     return (
         <div className={classes.statistics}>
-            <AboutCell/>
-            <GovermentRessource/>
-            <Parameters/>
         </div>
     )
 }
