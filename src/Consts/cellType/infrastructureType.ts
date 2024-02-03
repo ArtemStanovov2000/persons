@@ -11,7 +11,7 @@ interface InfrastructureTypeInstance {
     // Название инфраструктуры
     name: Parameter,
     // Изображение Инфтраструктуры
-    backgroundImage: string
+    backgroundImage: Parameter
 }
 
 export default InfrastructureTypeInstance;
@@ -26,55 +26,79 @@ export const InfrastructureType: InfrastructureTypeList = {
             name: "Тип",
             value: "Пусто"
         },
-        backgroundImage: "",
+        backgroundImage: {
+            name: "Изображение",
+            value: ""
+        },
     },
     goverment: {
         name: {
             name: "Тип",
             value: "Дом правительства"
         },
-        backgroundImage: imagesInfrastructure.goverment,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.goverment
+        },
     },
     oilWachturm: {
         name: {
             name: "Тип",
             value: "Нефтяная вышка"
         },
-        backgroundImage: imagesInfrastructure.oilWachturm,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.oilWachturm,
+        },
     },
     oilFactory: {
         name: {
             name: "Тип",
             value: "НПЗ"
         },
-        backgroundImage: imagesInfrastructure.oilFactory,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.oilFactory,
+        },
     },
     shop: {
         name: {
             name: "Тип",
             value: "Магазин"
         },
-        backgroundImage: imagesInfrastructure.shop,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.shop,
+        },
     },
     farm: {
         name: {
             name: "Тип",
             value: "Ферма"
         },
-        backgroundImage: imagesInfrastructure.farm,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.farm,
+        },
     },
     powerPlant: {
         name: {
             name: "Тип",
             value: "ТЭЦ"
         },
-        backgroundImage: imagesInfrastructure.powerPlant
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.powerPlant
+        },
     },
     home: {
         name: {
             name: "Тип",
             value: "Жилой дом"
         },
-        backgroundImage: imagesInfrastructure.home,
+        backgroundImage: {
+            name: "Изображение",
+            value: imagesInfrastructure.home,
+        },
     }
 }

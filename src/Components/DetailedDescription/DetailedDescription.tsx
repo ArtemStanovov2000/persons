@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import { createUseStyles } from "react-jss";
 import { Colors } from "../../Consts/colors";
+import AboutCell from "./AboutCell/AboutCell";
 
 const DetailedDescription: FC = () => {
 
@@ -24,9 +25,9 @@ const DetailedDescription: FC = () => {
     const classes = styles()
 
     return(
-        <article className={classes.detailed}>
-            
-        </article>
+        <section className={classes.detailed}>
+            <AboutCell/>
+        </section>
     )
 }
 

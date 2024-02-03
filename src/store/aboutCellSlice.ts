@@ -27,7 +27,10 @@ const aboutCellSlice = createSlice({
                     name: "Тип",
                     value: "Пусто"
                 },
-                backgroundImage: "",
+                backgroundImage: {
+                    name: "Изображение",
+                    value: ""
+                },
             }
         }
     },
