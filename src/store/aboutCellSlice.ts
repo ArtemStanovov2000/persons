@@ -6,41 +6,39 @@ const aboutCellSlice = createSlice({
         data: {
             texture: {
                 name: {
-                    name: "Тип",
+                    label: "Тип",
                     value: "Лес"
                 },
                 destroyCost: {
-                    name: "Строимость разрушения",
+                    label: "Строимость разрушения",
                     value: 3
                 },
-                backgroundImage: {
-                    name: "Изображение",
-                    value: ""
-                },
                 maintenanceCosts: {
-                    name: "Госрасходы",
+                    label: "Госрасходы",
                     value: 0
                 }
             },
             infrastructure: {
                 name: {
-                    name: "Тип",
-                    value: "Пусто"
-                },
-                backgroundImage: {
-                    name: "Изображение",
-                    value: ""
-                },
+                    label: "Тип",
+                    value: "Пусто",
+                    isVisible: true
+                }
             }
         }
     },
     reducers: {
         setStateInformation(state, action) {
             state.data = {
-                texture: action.payload.texture,
-                infrastructure: action.payload.infrastructure
+                texture: {
+                    name: action.payload.texture.name,
+                    destroyCost: action.payload.texture.destroyCost,
+                    maintenanceCosts: action.payload.texture.maintenanceCosts,
+                },
+                infrastructure: {
+                    name: action.payload.infrastructure.name
+                }
             }
-            state.data = action.payload
         }
     }
 })

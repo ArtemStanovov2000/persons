@@ -2,9 +2,11 @@ import { imagesTexture } from "../../img/imageAssets"
 
 interface Parameter {
     // Название параметра
-    name: string,
+    label: string,
     // Значение параметра
     value: number | string
+    // Видимость объекта
+    isVisible: boolean
 }
 
 interface GroundTypeInstance {
@@ -27,129 +29,157 @@ interface GroundType {
 export const GroundTypeList: GroundType = {
     bush: {
         name: {
-            name: "Тип",
-            value: "кусты"
+            label: "Тип",
+            value: "кусты",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.bush
+            label: "Изображение",
+            value: imagesTexture.bush,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0
+            label: "Госрасходы",
+            value: 0,
+            isVisible: true
         }
     },
     forest: {
         name: {
-            name: "Тип",
-            value: "Лес"
+            label: "Тип",
+            value: "Лес",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.forest
+            label: "Изображение",
+            value: imagesTexture.forest,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0
+            label: "Госрасходы",
+            value: 0,
+            isVisible: true
         }
     },
     grass: {
         name: {
-            name: "Тип",
-            value: "Трава"
+            label: "Тип",
+            value: "Трава",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.grass
+            label: "Изображение",
+            value: imagesTexture.grass,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0
+            label: "Госрасходы",
+            value: 0,
+            isVisible: true
         }
     },
     ground: {
         name: {
-            name: "Тип",
-            value: "Земля"
+            label: "Тип",
+            value: "Земля",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.ground
+            label: "Изображение",
+            value: imagesTexture.ground,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0.005
+            label: "Госрасходы",
+            value: 0.005,
+            isVisible: true
         }
 
     },
     undergrowth: {
         name: {
-            name: "Тип",
-            value: "кусты"
+            label: "Тип",
+            value: "кусты",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.undergrowth
+            label: "Изображение",
+            value: imagesTexture.undergrowth,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0
+            label: "Госрасходы",
+            value: 0,
+            isVisible: true
         }
     },
     paving: {
         name: {
-            name: "Тип",
-            value: "Брусчатка"
+            label: "Тип",
+            value: "Брусчатка",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.paving
+            label: "Изображение",
+            value: imagesTexture.paving,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0.02
+            label: "Госрасходы",
+            value: 0.02,
+            isVisible: true
         }
     },
     asphalt: {
         name: {
-            name: "Тип",
-            value: "Асфальт"
+            label: "Тип",
+            value: "Асфальт",
+            isVisible: true
         },
         destroyCost: {
-            name: "Строимость разрушения",
-            value: 3
+            label: "Строимость разрушения",
+            value: 3,
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesTexture.asphalt
+            label: "Изображение",
+            value: imagesTexture.asphalt,
+            isVisible: false
         },
         maintenanceCosts: {
-            name: "Госрасходы",
-            value: 0.01
+            label: "Госрасходы",
+            value: 0.01,
+            isVisible: true
         }
     },
 }

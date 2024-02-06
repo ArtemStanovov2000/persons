@@ -2,9 +2,11 @@ import { imagesInfrastructure } from "../../img/imageAssets"
 
 interface Parameter {
     // Название параметра
-    name: string,
+    label: string,
     // Значение параметра
     value: number | string
+    // Видимость объекта
+    isVisible: boolean
 }
 
 interface InfrastructureTypeInstance {
@@ -23,82 +25,98 @@ interface InfrastructureTypeList {
 export const InfrastructureType: InfrastructureTypeList = {
     none: {
         name: {
-            name: "Тип",
-            value: "Пусто"
+            label: "Тип",
+            value: "Пусто",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: ""
+            label: "Изображение",
+            value: "",
+            isVisible: false
         },
     },
     goverment: {
         name: {
-            name: "Тип",
-            value: "Дом правительства"
+            label: "Тип",
+            value: "Дом правительства",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesInfrastructure.goverment
+            label: "Изображение",
+            value: imagesInfrastructure.goverment,
+            isVisible: false
         },
     },
     oilWachturm: {
         name: {
-            name: "Тип",
-            value: "Нефтяная вышка"
+            label: "Тип",
+            value: "Нефтяная вышка",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
+            label: "Изображение",
             value: imagesInfrastructure.oilWachturm,
+            isVisible: false
         },
     },
     oilFactory: {
         name: {
-            name: "Тип",
-            value: "НПЗ"
+            label: "Тип",
+            value: "НПЗ",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
+            label: "Изображение",
             value: imagesInfrastructure.oilFactory,
+            isVisible: false
         },
     },
     shop: {
         name: {
-            name: "Тип",
-            value: "Магазин"
+            label: "Тип",
+            value: "Магазин",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
+            label: "Изображение",
             value: imagesInfrastructure.shop,
+            isVisible: false
         },
     },
     farm: {
         name: {
-            name: "Тип",
-            value: "Ферма"
+            label: "Тип",
+            value: "Ферма",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
+            label: "Изображение",
             value: imagesInfrastructure.farm,
+            isVisible: false
         },
     },
     powerPlant: {
         name: {
-            name: "Тип",
-            value: "ТЭЦ"
+            label: "Тип",
+            value: "ТЭЦ",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
-            value: imagesInfrastructure.powerPlant
+            label: "Изображение",
+            value: imagesInfrastructure.powerPlant,
+            isVisible: false
         },
     },
     home: {
         name: {
-            name: "Тип",
-            value: "Жилой дом"
+            label: "Тип",
+            value: "Жилой дом",
+            isVisible: true
         },
         backgroundImage: {
-            name: "Изображение",
+            label: "Изображение",
             value: imagesInfrastructure.home,
+            isVisible: false
         },
     }
 }

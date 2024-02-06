@@ -10,13 +10,19 @@ const createRandomBudget = (): number => {
     return budget
 }
 
+const createRandomSkill = (): number => {
+    const skill = Number((peopleParameters.maxSkill * Math.random()).toFixed(0))
+    return skill
+}
+
 const population = []
 
 for (let i = 0; i < peopleParameters.populationSize; i++) {
     const people = {
         age: createRandomAge(),
         budget: createRandomBudget(),
-        index: i
+        index: i,
+        skill: createRandomSkill()
     }
 
     population.push(people)

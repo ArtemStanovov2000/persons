@@ -11,10 +11,9 @@ interface Props {
 }
 
 const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
+    const cellData: CellType = useSelector<unknown, any>((state: any) => state.start.start[rowIndex][cellIndex])
 
-    let cellData: CellType = useSelector<unknown, any>((state: any) => state.start.start[rowIndex][cellIndex])
-
-    const styles = createUseStyles({
+    const useStyles = createUseStyles({
         cell: {
             height: "75px",
             width: "75px",
@@ -34,9 +33,10 @@ const Cell: FC<Props> = ({ rowIndex, cellIndex }) => {
         }
     });
 
-    const classes = styles()
+    const classes = useStyles()
 
     const dispatch = useDispatch()
+
     const setData = () => {
         dispatch(setStateInformation(cellData))
     }

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 import { useSelector } from "react-redux";
 import { createUseStyles } from "react-jss";
 import { Colors } from "../../../Consts/colors";
@@ -55,27 +55,35 @@ const useStyles = createUseStyles({
     }
 });
 
-const AboutCell: FC = () => {
+const Resources: FC = () => {
     const classes = useStyles()
 
-    const aboutCell: any = useSelector((state: any) => state.aboutCell.data)
+    const resources: any = useSelector((state: any) => state.ressource)
 
-    return (
+    return(
         <article className={classes.box}>
-            <h2 className={classes.mainTitle}>Информация о ячейке</h2>
+            <h2 className={classes.mainTitle}>Ресурсы</h2>
             <div className={classes.paramList}>
-                <h3 className={classes.title}>Территория</h3>
-                {Object.entries(aboutCell.texture).map((element: any, index: any) =>
+                <h3 className={classes.title}>Люди</h3>
+                {Object.entries(resources.people).map((element: any, index: any) =>
                     <div className={classes.paramItem} key={index}>
-                        <p className={classes.desc}>{element[1].label}</p>
+                        <p className={classes.desc}>{element[1].name}</p>
                         <p className={classes.desc}>{element[1].value}</p>
                     </div>)}
             </div>
             <div className={classes.paramList}>
-                <h3 className={classes.title}>Инфраструктура</h3>
-                {Object.entries(aboutCell.infrastructure).map((element: any, index: any) =>
+                <h3 className={classes.title}>Ископаемые ресурсы</h3>
+                {Object.entries(resources.fossils).map((element: any, index: any) =>
                     <div className={classes.paramItem} key={index}>
-                        <p className={classes.desc}>{element[1].label}</p>
+                        <p className={classes.desc}>{element[1].name}</p>
+                        <p className={classes.desc}>{element[1].value}</p>
+                    </div>)}
+            </div>
+            <div className={classes.paramList}>
+                <h3 className={classes.title}>Денежные ресурсы</h3>
+                {Object.entries(resources.money).map((element: any, index: any) =>
+                    <div className={classes.paramItem} key={index}>
+                        <p className={classes.desc}>{element[1].name}</p>
                         <p className={classes.desc}>{element[1].value}</p>
                     </div>)}
             </div>
@@ -83,4 +91,4 @@ const AboutCell: FC = () => {
     )
 }
 
-export default AboutCell
+export default Resources

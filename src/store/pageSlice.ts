@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const startSlice = createSlice({
     name: "page",
     initialState: {
-        page: "button1"
+        page: "Ячейка"
     },
     reducers: {
         setPageReducer(state, action) {
