@@ -22,23 +22,13 @@ const aboutCellSlice = createSlice({
                 name: {
                     label: "Тип",
                     value: "Пусто",
-                    isVisible: true
                 }
             }
         }
     },
     reducers: {
         setStateInformation(state, action) {
-            state.data = {
-                texture: {
-                    name: action.payload.texture.name,
-                    destroyCost: action.payload.texture.destroyCost,
-                    maintenanceCosts: action.payload.texture.maintenanceCosts,
-                },
-                infrastructure: {
-                    name: action.payload.infrastructure.name
-                }
-            }
+            state.data = action.payload
         }
     }
 })

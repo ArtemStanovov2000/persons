@@ -1,8 +1,14 @@
 import { TerritoryConst } from "../../Consts/TerritoryConst"
 import { GroundTypeList } from "../../Consts/cellType/groundType"
-import { InfrastructureType } from "../../Consts/cellType/infrastructureType"
-import InfrastructureTypeInstance from "../../Consts/cellType/infrastructureType"
 import GroundTypeInstance from "../../Consts/cellType/groundType"
+import { InfrastructureTypeInstance } from "../../Consts/cellType/infrastructureType/baseInfrastructure"
+import { BusinessType } from "../../Consts/cellType/infrastructureType/business"
+import { FinanceType } from "../../Consts/cellType/infrastructureType/finance"
+import { IndustryType } from "../../Consts/cellType/infrastructureType/industry"
+import { ManufacturingType } from "../../Consts/cellType/infrastructureType/manufacturIngIndustry"
+import { MiningIndustryType } from "../../Consts/cellType/infrastructureType/miningIndustry"
+import { SocialStructureType } from "../../Consts/cellType/infrastructureType/socialStructure"
+import { GovermentType } from "../../Consts/cellType/infrastructureType/goverment"
 
 interface CellType {
     texture: GroundTypeInstance,
@@ -14,20 +20,20 @@ export default CellType
 const createRandomType = function () {
     const randomNumber = Math.random()
     let cellType: CellType
-    if (randomNumber > 0.99) {
+    if (randomNumber > 0.98) {
         cellType = {
             texture: GroundTypeList.grass,
-            infrastructure: InfrastructureType.none
+            infrastructure: GovermentType.none
         }
     } else if (randomNumber > 0.75) {
         cellType = {
             texture: GroundTypeList.bush,
-            infrastructure: InfrastructureType.none
+            infrastructure: GovermentType.none
         }
     } else {
         cellType = {
             texture: GroundTypeList.forest,
-            infrastructure: InfrastructureType.none
+            infrastructure: GovermentType.none
         }
     }
     return cellType
@@ -46,17 +52,17 @@ for (let i = 0; i < TerritoryConst.countStringInSpace; i++) {
 // Дом правительства
 territory[7][13] = {
     texture: GroundTypeList.asphalt,
-    infrastructure: InfrastructureType.goverment
+    infrastructure: GovermentType.goverment
 }
 
 // Нефтяные вышки
 territory[10][4] = {
     texture: GroundTypeList.grass,
-    infrastructure: InfrastructureType.oilWachturm
+    infrastructure: MiningIndustryType.oilRig
 }
 territory[11][4] = {
     texture: GroundTypeList.grass,
-    infrastructure: InfrastructureType.oilWachturm
+    infrastructure: MiningIndustryType.oilRig
 }
 
 // Сельскохозяйственная земля
@@ -64,7 +70,7 @@ for (let i = 1; i < 6; i++) {
     for (let j = 1; j < 5; j++) {
         territory[i][j] = {
             texture: GroundTypeList.ground,
-            infrastructure: InfrastructureType.none
+            infrastructure: GovermentType.none
         }
     }
 }
@@ -72,25 +78,25 @@ for (let i = 1; i < 6; i++) {
 // Нефтеперерабатывающий завод
 territory[10][5] = {
     texture: GroundTypeList.asphalt,
-    infrastructure: InfrastructureType.oilFactory
+    infrastructure: ManufacturingType.refineryPlant
 }
 
 // Ферма
 territory[6][4] = {
     texture: GroundTypeList.grass,
-    infrastructure: InfrastructureType.farm
+    infrastructure: MiningIndustryType.farm
 }
 
 // Магазин
 territory[7][12] = {
     texture: GroundTypeList.asphalt,
-    infrastructure: InfrastructureType.shop
+    infrastructure: BusinessType.shop
 }
 
-// Магазин
+// ТЭЦ
 territory[11][5] = {
     texture: GroundTypeList.asphalt,
-    infrastructure: InfrastructureType.powerPlant
+    infrastructure: ManufacturingType.powerPlant
 }
 
 // Жилые дома
@@ -98,7 +104,7 @@ for (let i = 1; i < 6; i++) {
     for (let j = 7; j < 15; j++) {
         territory[i][j] = {
             texture: GroundTypeList.asphalt,
-            infrastructure: InfrastructureType.home
+            infrastructure: SocialStructureType.home
         }
     }
 }
